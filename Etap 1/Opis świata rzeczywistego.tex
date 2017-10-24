@@ -12,13 +12,13 @@
 \section{Portal do zamawiania jedzenia}
 \indent\indent Portal zawiera ofertę gastronomiczną lokali zlokalizowanych na terenie Wrocławia. Każdy z~nich oferuje sprzedaż produktów wraz z dowozem w~określonych godzinach, dla określonych, za pomocą kodu pocztowego, lokalizacji. Pełna oferta portalu zawiera punkty czynne w ciągu dnia, nocą, a~także całodobowe. Zamówienia internetowe można składać maksymalnie do trzydziestu minut przed zamknięciem lokalu.
 \section{System}
-\indent\indent Główną funkcjonalnością systemu jest składanie zamówień przez użytkowników. Preferowany jest użytkownik zarejestrowany, lecz dopuszczalne jest także złożenie zamówienia jako gość. Przy każdym produkcie znajduje się szacunkowy czas realizacji generowany jako czas średni $\pm$ losowa ilość minut z danego zakresu (np. dowóz zupy może mieć czas realizacji 15 $\pm$ 5 minut). Po złożeniu zamówienia otrzymuje ono status 'Przyjęte', następnie restaurator może zmienić status na 'W realizacji', a~potem 'Zrealizowane'. Przy każdym lokalu pokazywana jest cena dostawy wyliczona jako iloczyn stawki kilometrowej lokalu i odległości do klienta.
+\indent\indent Główną funkcjonalnością systemu jest składanie zamówień przez użytkowników. Po złożeniu zamówienia otrzymuje ono status 'Przyjęte', następnie restaurator może zmienić status na 'W realizacji', a~potem 'Zrealizowane'. Przy każdym lokalu pokazywana jest cena dostawy wyliczona jako iloczyn stawki kilometrowej lokalu i odległości do klienta.
 \subsection{Administrator systemu}
-\indent\indent W systemie istnieje jedno konto administratora, który ma uprawnienia do dodawania, edycji, usuwania kont lokali oraz zarejestrowanych użytkowników.
+\indent\indent W systemie istnieje jedno konto administratora, który ma uprawnienia do dodawania, usuwania, a także pełnej edycji kont i oferty lokali (edycja menu, ustawienie wcześniejszych godzin zamknięcia wybranego dnia, natychmiastowe zamknięcie lokalu).
 \subsection{Klient}
-\indent\indent Zarejestrowany użytkownik posiada w bazie danych określone przy rejestracji dane dostawy oraz kontaktowe, które może edytować samodzielnie w~dowolnym czasie z poziomu swojego konta. Na koncie użytkownika będzie wyświetlana historia zamówień (np. z ostatniego roku czy ostatnich kilku miesięcy).
+\indent\indent Zarejestrowany użytkownik posiada w bazie danych określone przy rejestracji dane dostawy oraz kontaktowe, które może edytować samodzielnie w~dowolnym czasie z poziomu swojego konta. Na koncie użytkownika będzie wyświetlana historia zamówień z ostatniego roku.
 \subsection{Restaurator}
-\indent\indent Restaurator, ze specjalnego konta z uprawnieniami do edycji lokalu, może edytować ofertę - ceny, obsługiwane kody pocztowe, godziny otwarcia, dodawać lub usuwać produkty z oferty, a~także oznaczać produkty jako niedostępne przez wybrany okres czasu, po którym automatycznie zostaną przywrócone do menu. Restaurator posiada też opcję całkowitego zamknięcia lub ustawienia wcześniejszej godziny zamknięcia lokalu wybranego dnia lub w kilka wybranych dni (np. okres świąt).
+\indent\indent Restaurator, ze specjalnego konta ma możliwość zmiany statusu zamówienia.
 \subsection{Lokale}
 \indent\indent Każdy lokal przedstawiany jest klientowi przy pomocy danych, takich jak:
 \begin{itemize}
@@ -30,19 +30,10 @@
 \item oferowane produkty, które są specyfikowane przez: cenę, nazwę, krótki opis.
 \end{itemize}
 \subsection{Składanie zamówienia}
-\subsubsection{Użytkownik zarejestrowany}
 \begin{enumerate}
 \item Logowanie do systemu.
 \item Dodanie zamówienia do koszyka (możliwość sortowania restauracji).
 \item Potwierdzenie danych, wybranie preferowanego czasu dostawy (jak najszybciej, za 2 godziny, etc.), wybranie formy płatności.
 \item Po upłynięciu 15 minut od ustawienia statusu 'Zrealizowane', użytkownik może wystawić ocenę restauracji.
 \end{enumerate}
-
-\subsubsection{Gość}
-\begin{enumerate}
-\item Podanie adresu dostawy (aby pokazać restauracje obsługujące dany obszar, a~także obliczyć koszt dowozu).
-\item Dodanie zamówienia do koszyka (możliwość sortowania restauracji).
-\item Przejście do podsumowania koszyka, uzupełnienie danych dostawy oraz kontaktowe, wybranie formy płatności.
-\end{enumerate}
-\indent\indent Składanie zamówienia jako gość jest bardziej czasochłonne, ponieważ za każdym razem musi on uzupełniać formularz z danymi. Ponadto użytkownik niezarejestrowany nie może zamawiać jedzenia na wybraną godzinę (jedynie dostępna opcja 'jak najszybciej'), a~także nie może oceniać restauracji.
 \end{document}
